@@ -65,24 +65,11 @@ export const stats: Stat[] = [
   { value: 2, label: 'Professional Certifications', icon: Award },
 ];
 
-/**
- * Skill depth is described qualitatively, not with percentages:
- *  - "applied"     → used in a real project
- *  - "working"     → comfortable, used in coursework / practice
- *  - "fundamentals"→ learning the foundations
- */
-export type SkillLevel = 'applied' | 'working' | 'fundamentals';
-export const skillLevelMeta: Record<SkillLevel, { label: string; steps: number }> = {
-  applied: { label: 'Used in projects', steps: 3 },
-  working: { label: 'Working knowledge', steps: 2 },
-  fundamentals: { label: 'Fundamentals', steps: 1 },
-};
-
 export type SkillGroup = {
   title: string;
   icon: LucideIcon;
   accent: 'blue' | 'purple' | 'cyan';
-  skills: { name: string; level: SkillLevel }[];
+  skills: string[];
 };
 
 export const skillGroups: SkillGroup[] = [
@@ -91,10 +78,10 @@ export const skillGroups: SkillGroup[] = [
     icon: Code2,
     accent: 'blue',
     skills: [
-      { name: 'Java', level: 'working' },
-      { name: 'Python', level: 'applied' },
-      { name: 'JavaScript', level: 'applied' },
-      { name: 'SQL', level: 'working' },
+      'Java',
+      'Python',
+      'JavaScript',
+      'SQL',
     ],
   },
   {
@@ -102,10 +89,10 @@ export const skillGroups: SkillGroup[] = [
     icon: Layout,
     accent: 'purple',
     skills: [
-      { name: 'HTML5', level: 'applied' },
-      { name: 'CSS3', level: 'applied' },
-      { name: 'React.js', level: 'applied' },
-      { name: 'Bootstrap', level: 'working' },
+      'HTML5',
+      'CSS3',
+      'React.js',
+      'Bootstrap',
     ],
   },
   {
@@ -113,8 +100,8 @@ export const skillGroups: SkillGroup[] = [
     icon: Server,
     accent: 'cyan',
     skills: [
-      { name: 'Node.js', level: 'applied' },
-      { name: 'Express.js', level: 'applied' },
+      'Node.js',
+      'Express.js',
     ],
   },
   {
@@ -122,8 +109,8 @@ export const skillGroups: SkillGroup[] = [
     icon: Database,
     accent: 'blue',
     skills: [
-      { name: 'MySQL', level: 'working' },
-      { name: 'MongoDB', level: 'applied' },
+      'MySQL',
+      'MongoDB',
     ],
   },
   {
@@ -131,12 +118,12 @@ export const skillGroups: SkillGroup[] = [
     icon: ShieldCheck,
     accent: 'purple',
     skills: [
-      { name: 'Manual Testing', level: 'working' },
-      { name: 'Exploratory Testing', level: 'working' },
-      { name: 'Test Case Design', level: 'working' },
-      { name: 'Bug Reporting', level: 'working' },
-      { name: 'Selenium', level: 'fundamentals' },
-      { name: 'Automation Testing', level: 'fundamentals' },
+      'Manual Testing',
+      'Exploratory Testing',
+      'Test Case Design',
+      'Bug Reporting',
+      'Selenium',
+      'Automation Testing',
     ],
   },
   {
@@ -144,11 +131,11 @@ export const skillGroups: SkillGroup[] = [
     icon: BarChart3,
     accent: 'cyan',
     skills: [
-      { name: 'Python', level: 'applied' },
-      { name: 'Pandas', level: 'applied' },
-      { name: 'NumPy', level: 'applied' },
-      { name: 'Exploratory Data Analysis', level: 'applied' },
-      { name: 'Data Visualization', level: 'applied' },
+      'Python',
+      'Pandas',
+      'NumPy',
+      'Exploratory Data Analysis',
+      'Data Visualization',
     ],
   },
   {
@@ -156,10 +143,10 @@ export const skillGroups: SkillGroup[] = [
     icon: Wrench,
     accent: 'blue',
     skills: [
-      { name: 'Git', level: 'applied' },
-      { name: 'GitHub', level: 'applied' },
-      { name: 'Postman', level: 'working' },
-      { name: 'VS Code', level: 'applied' },
+      'Git',
+      'GitHub',
+      'Postman',
+      'VS Code',
     ],
   },
 ];
